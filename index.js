@@ -4,7 +4,7 @@ require('./db/index')
 const typeDefs = require('./schema')
 const resolvers = require('./resolvers')
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, introspection: true, playground: true });
 
 //in order to listen to requests 
 const app = express();
