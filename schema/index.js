@@ -13,6 +13,9 @@ type Mutation {
         title: String!,
         image: String!,
         text: String!,
+    ):Boolean,
+    likePost(
+      _id: String
     ):Boolean
 }
   `

@@ -14,6 +14,15 @@ const post = async (obj, {title, image, text}) => {
     return true
 }
 
+const likePost = async (obj, {_id})=>{
+    let res = await Post.findByIdAndUpdate({_id: _id}, {$inc: {likes: 1}}).exec();
+    if(!res){
+        return false
+    }
+    return true
+}
+
 module.exports = {
-    post
+    post,
+    likePost
 }

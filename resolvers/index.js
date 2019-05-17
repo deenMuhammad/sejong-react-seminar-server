@@ -7,6 +7,7 @@ module.exports = {
         getSinglePost: postQuery.getSinglePost
     },
     Mutation: {
-        post: postMutation.post
+        post: postMutation.post,
+        likePost: postMutation.likePost
     }
 }
