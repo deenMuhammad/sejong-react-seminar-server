@@ -6,6 +6,6 @@ module.exports = gql`
         image: String,
         text: String,
         likes: Int,
-        date_added: Double 
+        date_added: Float 
     }
 `

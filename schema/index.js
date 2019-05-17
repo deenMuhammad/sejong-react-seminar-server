@@ -3,13 +3,16 @@ const types = require('./types');
 
 const query = gql`
   type Query {
-      getPosts: [Posts]
+      getPosts: [Post],
+      getSinglePost(
+        _id: String!
+      ):Post
     }
 type Mutation {
     post(
-        title: String,
-        image: String,
-        text: String,
+        title: String!,
+        image: String!,
+        text: String!,
     ):Boolean
 }
   `
