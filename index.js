@@ -72,7 +72,7 @@ const app = express();
 server.applyMiddleware({ app });
 
 // This `listen` method launches a web-server.  Existing apps
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 3000;
 
 app.listen({ port }, () =>
   console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`),)
